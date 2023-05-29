@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../includes/fractol.h"
 
-void	ft_free(t_data *mlx)
+
+void ft_free(t_data *mlx)
 {
 	mlx_destroy_window(mlx->mlx, mlx->win);
 	mlx_destroy_image(mlx->mlx, mlx->img->mlx_img);
@@ -21,7 +22,7 @@ void	ft_free(t_data *mlx)
 	free(mlx->img);
 }
 
-void	ft_help(void)
+void ft_help(void)
 {
 	printf("---------- Fract'Ol HELP ---------\n");
 	printf("use the mouse wheel to zoom in & out\n");
@@ -31,7 +32,7 @@ void	ft_help(void)
 	printf("----------- SEE YOU!!---------\n");
 }
 
-void	ft_alert(int fract)
+void ft_alert(int fract)
 {
 	if (fract > 2)
 		printf("******    Make Sure You Only Use One parameter  *****\n");
@@ -45,7 +46,7 @@ void	ft_alert(int fract)
 	}
 }
 
-void	render(t_data *mlx, int flag)
+void render(t_data *mlx, int flag)
 {
 	if (mlx->fractol == 1)
 	{
@@ -70,9 +71,9 @@ void	render(t_data *mlx, int flag)
 	}
 }
 
-int	main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	t_data	mlx;
+	t_data mlx;
 
 	if (argc == 2)
 	{

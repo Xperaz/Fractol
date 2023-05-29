@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../includes/fractol.h"
 
-int	julia_set(double x, double y, t_data *mlx)
+int julia_set(double x, double y, t_data *mlx)
 {
-	int		i;
-	double	xx;
-	double	yy;
-	double	temp;
+	int i;
+	double xx;
+	double yy;
+	double temp;
 
 	xx = x;
 	yy = y;
@@ -30,7 +30,7 @@ int	julia_set(double x, double y, t_data *mlx)
 		if ((xx * xx) + (yy * yy) > 4)
 		{
 			img_pix_put(mlx, mlx->loopx, mlx->loopy,
-				(mlx->color) + 0x0d0d0d * i);
+						(mlx->color) + 0x0d0d0d * i);
 			return (0);
 		}
 		i++;
@@ -39,10 +39,10 @@ int	julia_set(double x, double y, t_data *mlx)
 	return (0);
 }
 
-int	julia(t_data *mlx)
+int julia(t_data *mlx)
 {
-	double	x;
-	double	y;
+	double x;
+	double y;
 
 	mlx->loopx = 0;
 	mlx->loopy = 0;
@@ -63,9 +63,9 @@ int	julia(t_data *mlx)
 	return (0);
 }
 
-int	render_julia(void)
+int render_julia(void)
 {
-	t_data	*mlx;
+	t_data *mlx;
 
 	mlx = malloc(sizeof(t_data));
 	init(mlx);
@@ -81,9 +81,9 @@ int	render_julia(void)
 	mlx_hook(mlx->win, 17, 2, ft_exit, (void *)0);
 	mlx_mouse_hook(mlx->win, zoom, mlx);
 	mlx_string_put(mlx->mlx, mlx->win, 15, 10, 0xe74c3c,
-		"Julia");
+				   "Julia");
 	mlx_string_put(mlx->mlx, mlx->win, 480, 550, 0xe74c3c,
-		"By Aouhadou");
+				   "By Aouhadou");
 	mlx_loop(mlx->mlx);
 	return (0);
 }

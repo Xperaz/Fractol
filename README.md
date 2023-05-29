@@ -1,6 +1,6 @@
 # Fractol
 
-![Fract'ol](AlarmedThriftyDikkops-max-1mb.gif)
+![Fract'ol](/img/AlarmedThriftyDikkops-max-1mb.gif)
 
 This project is about creating graphically beautiful fractals.
 Note that **macOS is only supported**.

@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../includes/fractol.h"
 
-int	init(t_data *mlx)
+
+int init(t_data *mlx)
 {
 	if (!mlx)
 		return (0);
@@ -35,24 +36,24 @@ int	init(t_data *mlx)
 	if (!mlx->img->mlx_img)
 		return (0);
 	mlx->img->addr = mlx_get_data_addr(mlx->img->mlx_img, &mlx->img->bpp,
-			&mlx->img->line_len, &mlx->img->endian);
+									   &mlx->img->line_len, &mlx->img->endian);
 	if (!mlx->img->addr)
 		return (0);
 	return (1);
 }
 
-void	img_pix_put(t_data *mlx, int x, int y, int color)
+void img_pix_put(t_data *mlx, int x, int y, int color)
 {
-	char	*pixel;
+	char *pixel;
 
 	pixel = mlx->img->addr + (y * mlx->img->line_len + x * (mlx->img->bpp / 8));
 	*(int *)pixel = color;
 }
 
-int	ft_strcmp(char *s1, char *s2)
+int ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-	int	j;
+	int i;
+	int j;
 
 	i = 0;
 	j = 0;
@@ -68,10 +69,10 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-int	zoom(int keycode, int x, int y, t_data *mlx)
+int zoom(int keycode, int x, int y, t_data *mlx)
 {
-	float	fx;
-	float	fy;
+	float fx;
+	float fy;
 
 	fx = (mlx->xmax - mlx->xmin) / SIZEX;
 	fy = (mlx->ymax - mlx->ymin) / SIZEY;
@@ -94,7 +95,7 @@ int	zoom(int keycode, int x, int y, t_data *mlx)
 	return (0);
 }
 
-int	ft_exit(void)
+int ft_exit(void)
 {
 	exit(1);
 	return (0);

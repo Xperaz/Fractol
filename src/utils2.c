@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fractol.h"
+#include "../includes/fractol.h"
 
-void	move(int keycode, t_data *mlx)
+
+void move(int keycode, t_data *mlx)
 {
-	float	dx;
-	float	dy;
+	float dx;
+	float dy;
 
 	dx = (mlx->xmax - mlx->xmin);
 	dy = (mlx->ymax - mlx->ymin);
@@ -37,10 +38,9 @@ void	move(int keycode, t_data *mlx)
 	}
 }
 
-int	keys(int keycode, t_data *mlx)
+int keys(int keycode, t_data *mlx)
 {
-	if (keycode == 53 || keycode == 123 || keycode == 124
-		|| keycode == 126 || keycode == 125)
+	if (keycode == 53 || keycode == 123 || keycode == 124 || keycode == 126 || keycode == 125)
 		move(keycode, mlx);
 	if (keycode == 8)
 		mlx->color += 0x0d0d0d;

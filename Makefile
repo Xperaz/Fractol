@@ -1,7 +1,7 @@
-HEADER=fractol.h
+HEADER=includes/fractol.h
 
-SRC_FILE = main.c utils.c mandelbrot.c julia.c \
-			burningship.c utils2.c\
+SRC_FILE = src/main.c src/utils.c src/mandelbrot.c src/julia.c \
+			src/burningship.c src/utils2.c\
 
 NAME = fractol
 OBJ_FILE = $(SRC_FILE:.c=.o)
