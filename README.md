@@ -2,7 +2,8 @@
 
 ![Fract'ol](/img/AlarmedThriftyDikkops-max-1mb.gif)
 
-This project is about creating graphically beautiful fractals.
+This project is about creating graphically beautiful fractals.<br/>
+For more info take look to the  [subject](https://github.com/Xperaz/Fractol/blob/master/en.subject.pdf[!embded]). <br/>
 Note that **macOS is only supported**.
 
 ## Installation
